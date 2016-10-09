@@ -1,0 +1,24 @@
+doctype html
+html(ng-app='App' lang='en')
+	head
+			meta(charset='utf-8')
+			meta(name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0")
+			title='題詠のネタchatbot'
+			link(rel='stylesheet' type='text/css' href='dest/assets/stylesheets/main.css')
+			link(rel='stylesheet' type='text/css' href='dest/assets/stylesheets/button.css')
+	body
+		#main_content.wrapper
+			h1 題詠のネタ
+			h2 短歌の題を考えてくれます
+			#result 　
+			.general-button#near(onClick="daiWoDasu('近い！')")
+				.button-content
+					span.button-text ちょっと違うの
+			.general-button#far(onClick="daiWoDasu('別の！')")
+				.button-content
+					span.button-text ぜんぜん違うの
+			.general-button#korenisuru(onClick="korenisuru()")
+				.button-content
+					span.button-text これにする
+
+script(src='dest/assets/js/app.js')

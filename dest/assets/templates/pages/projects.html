@@ -1,0 +1,24 @@
+
+<ui-view>
+  <div class="projects-wrapper">
+    <h3>Projects	</h3>
+    <div ng-repeat="p in projects" class="wrap"><a ui-sref="projects.detail({projectName:p.name})" ng-attr-id="{{p.name}}" class="mono project">
+        <div class="bgMask">
+          <h4>{{p.title}}</h4>
+          <p>{{p.detail}}</p>
+          <p>{{p.date}}</p>
+        </div></a></div>
+    <div class="wrap"><a id="cute" href="https://www.npmjs.com/package/hypercute" class="mono project">
+        <div class="bgMask">
+          <h4>hypercute</h4>
+          <p>A port of the super cute theme to hyperterm.</p>
+          <p>2016/8/7</p>
+        </div></a></div>
+    <div class="wrap"><a id="ika" href="https://etahapi.github.io/ika-simulator/" class="mono project">
+        <div class="bgMask">
+          <h4>ika-simulator</h4>
+          <p>Squid game simulator</p>
+          <p>2016/9/15</p>
+        </div></a></div>
+  </div>
+</ui-view>

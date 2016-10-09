@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="App" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0">
+    <title>題詠のネタchatbot</title>
+    <link rel="stylesheet" type="text/css" href="dest/assets/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="dest/assets/stylesheets/button.css">
+  </head>
+  <body>
+    <div id="main_content" class="wrapper">
+      <h1>題詠のネタ</h1>
+      <h2>短歌の題を考えてくれます</h2>
+      <div id="result">　</div>
+      <div id="near" onClick="daiWoDasu('近い！')" class="general-button">
+        <div class="button-content"><span class="button-text">ちょっと違うの</span></div>
+      </div>
+      <div id="far" onClick="daiWoDasu('別の！')" class="general-button">
+        <div class="button-content"><span class="button-text">ぜんぜん違うの</span></div>
+      </div>
+      <div id="korenisuru" onClick="korenisuru()" class="general-button">
+        <div class="button-content"><span class="button-text">これにする</span></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="dest/assets/js/app.js"></script>

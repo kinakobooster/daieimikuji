@@ -1,0 +1,55 @@
+{
+  "name": "kusomikuzi",
+  "version": "0.0.1",
+  "description": "web site of etahapi",
+  "main": "gulpfile.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etahapi/etahapi.github.io.git"
+  },
+  "author": "eifuku cipher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etahapi/etahapi.github.io/issues"
+  },
+  "browser": {
+    "cheerio-httpcli": "./node_modules/cheerio-httpcli/index.js"
+
+  },
+
+  "homepage": "https://etahapi.github.io",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.6.5",
+    "browserify": "^9.0.8",
+    "cheerio-httpcli": "^0.6.9",
+    "coffee-script": "^1.9.2",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": ">=1.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-jade": "^1.0.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.2.4",
+    "main-bower-files": ">=2.0.0",
+    "node-bourbon": "^4.2.1-beta1",
+    "node-sass": "^3.8.0",
+    "try-thread-sleep": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "cheerio-httpcli": "^0.6.9"
+  }
+}

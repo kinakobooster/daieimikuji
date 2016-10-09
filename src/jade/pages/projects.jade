@@ -1,0 +1,21 @@
+ui-view
+	.projects-wrapper
+		h3 Projects	
+		.wrap(ng-repeat="p in projects")
+			a.mono.project(ui-sref="projects.detail({projectName:p.name})" ng-attr-id="{{p.name}}")
+				.bgMask
+					h4 {{p.title}}
+					p {{p.detail}}
+					p {{p.date}}
+		.wrap
+			a.mono.project(id="cute" href="https://www.npmjs.com/package/hypercute")
+				.bgMask
+					h4 hypercute
+					p A port of the super cute theme to hyperterm.
+					p 2016/8/7
+		.wrap
+			a.mono.project(id="ika" href="https://etahapi.github.io/ika-simulator/")
+				.bgMask
+					h4 ika-simulator
+					p Squid game simulator
+					p 2016/9/15
