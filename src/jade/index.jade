@@ -13,7 +13,8 @@ html(ng-app='App' lang='en')
 		#main_content.wrapper
 			h1 題詠のネタ
 			h2 短歌の題を考えてくれます
-			#result 　
+			#result 
+				ul#says
 			.general-button#near(onClick="daiWoDasu('近いけど他のは？')")
 				.button-content
 					span.button-text ちょっと違うの
@@ -26,18 +27,22 @@ html(ng-app='App' lang='en')
 			.share
 			.copyright
 				| made by 
-				| a(href="")@kinakobooster of
-				| a(href="")EIFUKU CIPHER
-				|  2016 october
+				a(href="http://noubrain.hateblo.jp/") @kinakobooster
+				|  of 
+				a(href="https://etahapi.github.io") EIFUKU CIPHER
+				|  2016 October
 			
 			
 		#lightbox
-			#mask 　
+			#mask(onClick="reset()") 　
 			#modal
 				#kettei
+					| 題
+					span#dai 「」
+					| に決めました
 				.share
 					#twitter
-				a.onemore x 閉じる/ もう一回
+				a.onemore(onClick="reset()") x 閉じる / もう一回
 			
 		
 script(src='dest/assets/js/app.js')

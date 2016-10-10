@@ -32,6 +32,10 @@ window.addEventListener("load", function (eve) {
   });
 }, false);
 
+function reset() {
+  location.reload();
+}
+
 //プレイヤーの発言と、botの発言（ランダム）を表示する
 function daiWoDasu(serihu) {
   if (isWait == true) {
@@ -56,10 +60,11 @@ function resultScroll() {
 
 //ボットに発言させる
 function botSays(hatugen) {
-  var disp = document.getElementById('result');
-  var element = document.createElement('div');
+  var disp = document.getElementById('says');
+  var element = document.createElement('li');
   element.className = "botSays";
   element.innerHTML = hatugen;
+  element.style.width = hatugen.length + 3 + "em";
   setTimeout(function () {
     disp.appendChild(element);
     resultScroll();
@@ -68,10 +73,11 @@ function botSays(hatugen) {
 
 //プレイヤーに発言させる
 function playerSays(hatugen) {
-  var disp = document.getElementById('result');
-  var element = document.createElement('div');
+  var disp = document.getElementById('says');
+  var element = document.createElement('li');
   element.className = "playerSays";
   element.innerHTML = hatugen;
+  element.style.width = hatugen.length + 3 + "em";
   setTimeout(function () {
     disp.appendChild(element);
     resultScroll();
@@ -79,13 +85,10 @@ function playerSays(hatugen) {
 }
 
 //決定ダイアログを出す
-function submit(hatugen) {
+function submit(hatugen, dai) {
   showTweetbutton(hatugen);
-  var element = document.createElement('h2');
-  element.className = 'kettei';
-  element.innerHTML = hatugen;
-  var modal = document.getElementById('modal');
-  modal.appendChild(element);
+  var element = document.getElementById('dai');
+  element.innerHTML = '「' + dai + '」';
 
   var disp = document.getElementById('lightbox');
   disp.style.display = 'block';
@@ -103,9 +106,9 @@ function korenisuru() {
   var kettei = daiMemory.pop();
   playerSays('「' + kettei + '」にするね');
   if (daiMemory.length > 2) {
-    submit('「' + daiMemory.pop() + '」、「' + daiMemory.pop() + '」、「' + daiMemory.pop() + '」などの案から、題「' + kettei + '」を選びました');
+    submit('題「' + daiMemory.pop() + '」、「' + daiMemory.pop() + '」、「' + daiMemory.pop() + '」などの案から、題「' + kettei + '」を選びました', kettei);
   } else {
-    submit('「' + kettei + '」を選びました');
+    submit('題「' + kettei + '」を選びました', kettei);
   }
 }
 

@@ -1,9 +1,12 @@
+@import "color"
+
 #lightbox
   display: none
   width: 100%
   height: 100%
   position: fixed
   top: 0;
+
 #mask
   position: fixed;
   top: 0;
@@ -13,7 +16,7 @@
 
 #modal
   position: fixed;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.8)
   width: 300px;
   height: 300px;
   top: 50%;
@@ -21,3 +24,28 @@
   margin-top: -150px;
   margin-left: -150px;
   border-radius: 10px;
+  padding: 18px
+  text-align: center
+
+#dai
+  font-size: 3em
+  display: block
+
+#kettei
+  margin:  15px
+  border-radius: 18px
+  padding: 10px
+  background: rgb(255, 251, 163)
+
+.share
+  margin: 25px
+
+.onemore
+  position: relative
+  top : 20%
+  border-radius: 10px;
+  padding: 10px
+  border : $bgGray 2px solid
+  margin: 20px
+.onemore:hover
+  background: rgb(214, 214, 214)

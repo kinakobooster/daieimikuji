@@ -13,7 +13,9 @@
     <div id="main_content" class="wrapper">
       <h1>題詠のネタ</h1>
       <h2>短歌の題を考えてくれます</h2>
-      <div id="result">　</div>
+      <div id="result"> 
+        <ul id="says"></ul>
+      </div>
       <div id="near" onClick="daiWoDasu('近いけど他のは？')" class="general-button">
         <div class="button-content"><span class="button-text">ちょっと違うの</span></div>
       </div>
@@ -24,20 +26,15 @@
         <div class="button-content"><span class="button-text">これにする</span></div>
       </div>
       <div class="share"></div>
-      <div class="copyright">
-        made by 
-        a(href="")@kinakobooster of
-        a(href="")EIFUKU CIPHER
-         2016 october
-      </div>
+      <div class="copyright">made by <a href="http://noubrain.hateblo.jp/">@kinakobooster</a> of <a href="https://etahapi.github.io">EIFUKU CIPHER</a> 2016 October</div>
     </div>
     <div id="lightbox">
-      <div id="mask">　</div>
+      <div id="mask" onClick="reset()">　</div>
       <div id="modal">
-        <div id="kettei"></div>
+        <div id="kettei">題<span id="dai">「」</span>に決めました</div>
         <div class="share">
           <div id="twitter"></div>
-        </div><a class="onemore">x 閉じる/ もう一回</a>
+        </div><a onClick="reset()" class="onemore">x 閉じる / もう一回</a>
       </div>
     </div>
   </body>
