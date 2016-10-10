@@ -6,19 +6,38 @@ html(ng-app='App' lang='en')
 			title='題詠のネタchatbot'
 			link(rel='stylesheet' type='text/css' href='dest/assets/stylesheets/main.css')
 			link(rel='stylesheet' type='text/css' href='dest/assets/stylesheets/button.css')
+			link(rel='stylesheet' type='text/css' href='dest/assets/stylesheets/lightbox.css')
+			script(id="twitter-wjs" src="http://platform.twitter.com/widgets.js")
+
 	body
 		#main_content.wrapper
 			h1 題詠のネタ
 			h2 短歌の題を考えてくれます
 			#result 　
-			.general-button#near(onClick="daiWoDasu('近い！')")
+			.general-button#near(onClick="daiWoDasu('近いけど他のは？')")
 				.button-content
 					span.button-text ちょっと違うの
-			.general-button#far(onClick="daiWoDasu('別の！')")
+			.general-button#far(onClick="daiWoDasu('ぜんぜん違うやつがいい')")
 				.button-content
 					span.button-text ぜんぜん違うの
 			.general-button#korenisuru(onClick="korenisuru()")
 				.button-content
 					span.button-text これにする
-
+			.share
+			.copyright
+				| made by 
+				| a(href="")@kinakobooster of
+				| a(href="")EIFUKU CIPHER
+				|  2016 october
+			
+			
+		#lightbox
+			#mask 　
+			#modal
+				#kettei
+				.share
+					#twitter
+				a.onemore x 閉じる/ もう一回
+			
+		
 script(src='dest/assets/js/app.js')

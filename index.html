@@ -6,20 +6,38 @@
     <title>題詠のネタchatbot</title>
     <link rel="stylesheet" type="text/css" href="dest/assets/stylesheets/main.css">
     <link rel="stylesheet" type="text/css" href="dest/assets/stylesheets/button.css">
+    <link rel="stylesheet" type="text/css" href="dest/assets/stylesheets/lightbox.css">
+    <script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script>
   </head>
   <body>
     <div id="main_content" class="wrapper">
       <h1>題詠のネタ</h1>
       <h2>短歌の題を考えてくれます</h2>
       <div id="result">　</div>
-      <div id="near" onClick="daiWoDasu('近い！')" class="general-button">
+      <div id="near" onClick="daiWoDasu('近いけど他のは？')" class="general-button">
         <div class="button-content"><span class="button-text">ちょっと違うの</span></div>
       </div>
-      <div id="far" onClick="daiWoDasu('別の！')" class="general-button">
+      <div id="far" onClick="daiWoDasu('ぜんぜん違うやつがいい')" class="general-button">
         <div class="button-content"><span class="button-text">ぜんぜん違うの</span></div>
       </div>
       <div id="korenisuru" onClick="korenisuru()" class="general-button">
         <div class="button-content"><span class="button-text">これにする</span></div>
+      </div>
+      <div class="share"></div>
+      <div class="copyright">
+        made by 
+        a(href="")@kinakobooster of
+        a(href="")EIFUKU CIPHER
+         2016 october
+      </div>
+    </div>
+    <div id="lightbox">
+      <div id="mask">　</div>
+      <div id="modal">
+        <div id="kettei"></div>
+        <div class="share">
+          <div id="twitter"></div>
+        </div><a class="onemore">x 閉じる/ もう一回</a>
       </div>
     </div>
   </body>
